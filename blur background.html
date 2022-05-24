@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("image.png");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="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"></div>
+
+<div class="bg-text">
+  <h2>Blurred Background</h2>
+  <h1 style="font-size:50px">hello</h1>
+  <p>hello</p>
+</div>
+
+</body>
+</html>
